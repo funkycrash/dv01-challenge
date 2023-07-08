@@ -4,7 +4,7 @@ import { resetFilters } from '../filtersSlice'
 
 const FilterPanel = () => {
   const dispatch = useDispatch()
-  const onResetFilter = dispatch(resetFilters())
+  const onResetFilter = () => dispatch(resetFilters())
 
   return (
     <div className='flex-row'>
