@@ -1,7 +1,7 @@
 import React from 'react'
+import utils from '../../utils/utils'
 
 const Table = loans => {
-  console.log(loans.data)
   // Generate the table header columns dynamically
   const tableHeader = Object.keys(loans.data).map(grade => (
     <th key={grade}>Grade {grade}</th>
@@ -11,12 +11,7 @@ const Table = loans => {
   const tableRows = (
     <tr>
       {Object.values(loans.data).map((balance, index) => (
-        <td key={index}>
-          {new Intl.NumberFormat('en-US', {
-            style: 'currency',
-            currency: 'USD'
-          }).format(balance)}
-        </td>
+        <td key={index}>{utils.formatCurrency(balance)}</td>
       ))}
     </tr>
   )
