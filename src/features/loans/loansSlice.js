@@ -4,6 +4,7 @@ import {
   createAsyncThunk
 } from '@reduxjs/toolkit'
 import { getData } from '../../request/api'
+import utils from '../../utils/utils'
 
 const loansAdapter = createEntityAdapter()
 const initialState = loansAdapter.getInitialState({
@@ -35,6 +36,8 @@ const loansSlice = createSlice({
       .addCase(fetchLoans.fulfilled, (state, action) => {
         loansAdapter.setAll(state, action.payload)
         state.status = 'idle'
+        const filterChoices = utils.extractUniqueValues(action.payload)
+        state.filterChoices = filterChoices
       })
       .addCase(fetchLoans.rejected, state => {
         state.status = 'error'
