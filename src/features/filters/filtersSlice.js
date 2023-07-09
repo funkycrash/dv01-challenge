@@ -15,7 +15,9 @@ const filtersSlice = createSlice({
       state[action.payload.key] = action.payload.value
     },
     resetFilters (state) {
-      state = initalState
+      Object.keys(state).forEach(key => {
+        state[key] = initalState[key]
+      })
     }
   }
 })
