@@ -23,10 +23,12 @@ const extractUniqueValues = loans => {
       quarter: []
     }
   )
-  uniqueValues.homeOwnership.sort()
-  uniqueValues.term.sort()
-  uniqueValues.year.sort()
-  uniqueValues.quarter.sort()
+  uniqueValues.homeOwnership = uniqueValues.homeOwnership
+    .filter(option => option)
+    .sort()
+  uniqueValues.term = uniqueValues.term.filter(option => option).sort()
+  uniqueValues.year = uniqueValues.year.filter(option => option).sort()
+  uniqueValues.quarter = uniqueValues.quarter.filter(option => option).sort()
 
   return uniqueValues
 }

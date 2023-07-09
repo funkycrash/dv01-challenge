@@ -7,7 +7,8 @@ describe('extractUniqueValues', () => {
       { homeOwnership: 'Own', term: 'Long-term', year: 2022, quarter: 'Q2' },
       { homeOwnership: 'Rent', term: 'Short-term', year: 2023, quarter: 'Q1' },
       { homeOwnership: 'Own', term: 'Long-term', year: 2023, quarter: 'Q2' },
-      { homeOwnership: 'Own', term: 'Short-term', year: 2023, quarter: 'Q3' }
+      { homeOwnership: 'Own', term: 'Short-term', year: 2023, quarter: 'Q3' },
+      { homeOwnership: null, term: 'Short-term', year: undefined, quarter: '' }
     ]
 
     const expectedValues = {
