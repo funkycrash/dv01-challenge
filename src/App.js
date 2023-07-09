@@ -15,7 +15,6 @@ const App = () => {
 
   return (
     <div className='App'>
-      <h1>dv01 Loan Analysis</h1>
       {status === 'loading' && <div>Loading...</div>}
       {status === 'error' && (
         <p>We've encountered an error please contact us.</p>

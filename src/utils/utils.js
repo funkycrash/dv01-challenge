@@ -40,4 +40,11 @@ const formatCurrency = value => {
   }).format(value)
 }
 
-export default { extractUniqueValues, formatCurrency }
+const formatCompact = value => {
+  return new Intl.NumberFormat('en-US', {
+    notation: 'compact',
+    compactDisplay: 'short'
+  }).format(value)
+}
+
+export default { extractUniqueValues, formatCurrency, formatCompact }

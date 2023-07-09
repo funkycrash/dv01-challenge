@@ -30,3 +30,11 @@ describe('formatCurrency', () => {
     expect(formattedValue).toBe('$12,345.67')
   })
 })
+
+describe('formatCompact', () => {
+  it('should format compact value correctly', () => {
+    const value = 1000
+    const formattedValue = utils.formatCompact(value)
+    expect(formattedValue).toBe('1K')
+  })
+})

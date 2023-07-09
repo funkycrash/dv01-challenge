@@ -1,6 +1,8 @@
-import React, { useMemo } from 'react'
+import React, { useMemo, useState } from 'react'
 import { useSelector } from 'react-redux'
 import Table from './Table'
+import BarGraph from './BarGraph'
+import NoData from './NoData'
 
 const LoanContainer = () => {
   // Redux selector to access the filter values
@@ -45,7 +47,38 @@ const LoanContainer = () => {
     return grades
   }, [loans, homeOwnership, quarter, term, year])
 
-  return <Table data={memoizedData} />
+  // Local UI logic
+  const [view, setView] = useState('table')
+
+  const handleViewToggle = () => {
+    setView(prevView => (prevView === 'barGraph' ? 'table' : 'barGraph'))
+  }
+
+  const toggleButtonLabel =
+    view === 'barGraph' ? 'Switch to Table View' : 'Switch to Graph View'
+
+  const noData = Object.keys(memoizedData).length === 0
+
+  return (
+    <>
+      <h1 className='text-center'>
+        dv01 Loan Analysis{' '}
+        <span>
+          <button onClick={handleViewToggle}>{toggleButtonLabel}</button>
+        </span>
+      </h1>
+      <div className='flex-row vertical-center'>
+        <div
+          className='medium-container vertical-center'
+          style={{ height: '300px' }}
+        >
+          {noData && <NoData />}
+          {!noData && view === 'barGraph' && <BarGraph data={memoizedData} />}
+          {!noData && view === 'table' && <Table data={memoizedData} />}
+        </div>
+      </div>
+    </>
+  )
 }
 
 export default LoanContainer
