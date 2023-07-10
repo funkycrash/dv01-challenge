@@ -7,7 +7,7 @@
 <br />
 <div align="center">
   <a href="https://www.dv01.co/">
-    <img src="https://images.ctfassets.net/754lisswuj3q/1A6cMInS2mBWi5IMerlNoF/2b786c8543edf5369634f72f7bf0f3ad/dv01_fitch_logo_white.svg" alt="Logo" width="80" height="80">
+    <img src="https://mma.prnewswire.com/media/534039/dv01_logo_dark_720__1_Logo.jpg" alt="Logo">
   </a>
 
   <h3 align="center">DV01 Frontend Challenge</h3>
@@ -130,6 +130,7 @@ LinkedIn: [https://www.linkedin.com/in/nicolasfunke/](https://www.linkedin.com/i
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[dv01-logo]: documentation/logo.jpg
 [product-graph]: documentation/dv01-graph.png
 [product-table]: documentation/dv01-table.png
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
