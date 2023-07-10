@@ -95,6 +95,7 @@ To get a local copy up and running follow these simple example steps.
    ```
 2. Install packages
    ```sh
+   cd dv01-challenge
    yarn
    ```
 3. Start the project
