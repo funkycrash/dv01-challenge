@@ -19,6 +19,7 @@ const Dropdown = ({ options, disabledLabel, storeKey }) => {
       className='one-fourth'
       value={selectedValue}
       onChange={onStatusChange}
+      name={storeKey}
     >
       <option disabled value=''>
         {disabledLabel}
