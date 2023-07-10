@@ -67,7 +67,7 @@ const LoanContainer = () => {
           <button onClick={handleViewToggle}>{toggleButtonLabel}</button>
         </span>
       </h1>
-      <div className='flex-row vertical-center'>
+      <div className='flex-row vertical-center' id='loan-container'>
         <div
           className='medium-container vertical-center'
           style={{ height: '300px' }}
